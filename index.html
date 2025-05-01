@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Lovers Association</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Add the translations file before the main script -->
+    <script src="translations.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="book-open" aria-hidden="true"></i>
+                <span data-translate="logo">Book Lovers Association</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" data-translate="nav_home">Home</a></li>
+                    <li><a href="#features" data-translate="nav_features">Features</a></li>
+                    <li><a href="#gallery" data-translate="nav_gallery">Gallery</a></li>
+                    <li><a href="#resources" data-translate="nav_resources">Resources</a></li>
+                    <li><a href="#about" data-translate="nav_about">About</a></li>
+                    <li><a href="#contact" data-translate="nav_contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="langToggle" class="language-toggle" onclick="toggleLanguage()">
+                    <i data-lucide="globe" aria-hidden="true"></i>
+                    <span>Switch to Amharic</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 data-translate="hero_title">Discover the Joy of Reading Together</h1>
+                <p data-translate="hero_subtitle">Join our community of passionate readers and explore the world of literature through shared experiences.</p>
+                <div class="hero-buttons">
+                    <a href="#join" class="button button-primary" data-translate="join_now">Join Now</a>
+                    <a href="#about" class="button button-outline" data-translate="learn_more">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section features-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="features_title">Why Join Our Community</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="book" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-translate="feature_1_title">Curated Reading Lists</h3>
+                        <p data-translate="feature_1_desc">Discover books tailored to your reading preferences and interests.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="users" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-translate="feature_2_title">Special Events</h3>
+                        <p data-translate="feature_2_desc">Participate in thought-provoking discussions with authors and fellow readers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="bell" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-translate="feature_3_title">Early Access</h3>
+                        <p data-translate="feature_3_desc">Be the first to know about new books and upcoming events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section id="image-gallery" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="gallery_title">Our Community Events</h2>
+                <div class="gallery-container">
+                    <div id="gallery-slider" class="gallery-slider">
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Book club meeting">
+                            <div class="gallery-caption">
+                                <h3 data-translate="gallery_slide1_title">Monthly Book Club Meeting</h3>
+                                <p data-translate="gallery_slide1_desc">Members discussing "The Midnight Library" by Matt Haig</p>
+                            </div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Library event">
+                            <div class="gallery-caption">
+                                <h3 data-translate="gallery_slide2_title">Author Meet & Greet</h3>
+                                <p data-translate="gallery_slide2_desc">Special event with bestselling authors at our annual literary festival</p>
+                            </div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Reading workshop">
+                            <div class="gallery-caption">
+                                <h3 data-translate="gallery_slide3_title">Children's Reading Workshop</h3>
+                                <p data-translate="gallery_slide3_desc">Fostering a love for reading in the next generation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="prev-btn">
+                            <i data-lucide="chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="next-btn">
+                            <i data-lucide="chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PDF Resources Section -->
+        <section id="pdf-gallery" class="section pdf-section">
+            <div class="container">
+                <h2 data-translate="resources_title" class="section-title">Reading Resources</h2>
+                <div class="pdf-grid">
+                    <div class="pdf-item">
+                        <div class="pdf-item-header">
+                            <div class="pdf-icon">
+                                <i data-lucide="file-text" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 data-translate="pdf1_title">Modern Fiction Guide</h3>
+                                <p data-translate="pdf1_author class="author">By John Doe</p>
+                            </div>
+                        </div>
+                        <div class="pdf-item-content">
+                            <p data-translate="pdf1_desc class="info">An essential guide to contemporary fiction and emerging authors.</p>
+                            <p data-translate="pdf1_info class="info">Published: 2023 | Pages: 150</p>
+                        </div>
+                        <div class="pdf-item-footer">
+                            <a data-translate="pdf_view" href="B1.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+                        </div>
+                    </div>
+                    <div class="pdf-item">
+                        <div class="pdf-item-header">
+                            <div class="pdf-icon">
+                                <i data-lucide="file-text" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 data-translate="pdf2_title">Classic Literature Analysis</h3>
+                                <p data-translate="pdf2_author" class="author">By Jane Smith</p>
+                            </div>
+                        </div>
+                        <div class="pdf-item-content">
+                            <p data-translate="pdf2_desc" class="info">Deep dive into timeless classics and their cultural impact.</p>
+                            <p data-translate="pdf2_info" class="info">Published: 2022 | Pages: 200</p>
+                        </div>
+                        <div class="pdf-item-footer">
+                            <a data-translate="pdf_view" href="B2.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+                        </div>
+                    </div>
+                    <div class="pdf-item">
+                        <div class="pdf-item-header">
+                            <div class="pdf-icon">
+                                <i data-lucide="file-text" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 data-translate="pdf3_title">Book Club Starter Guide</h3>
+                                <p data-translate="pdf3_author" class="author">By Alice Johnson</p>
+                            </div>
+                        </div>
+                        <div class="pdf-item-content">
+                            <p data-translate="pdf3_desc" class="info">Everything you need to know to start and run a successful book club.</p>
+                            <p data-translate="pdf3_info" class="info">Published: 2021 | Pages: 120</p>
+                        </div>
+                        <div class="pdf-item-footer">
+                            <a data-translate="pdf_view" href="B3.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="testimonials_title">What Our Members Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote" data-translate="testimonial1_quote">The Book Lovers Association has transformed our local reading group into a vibrant literary community.</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="author-avatar">
+                            <div>
+                                <strong data-translate="testimonial1_name">Sarah J.</strong>
+                                <p data-translate="testimonial1_role">Reading Club Leader</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote" data-translate="testimonial2_quote">As a teacher, I'm amazed by the depth and diversity of discussions this association fosters.</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael R." class="author-avatar">
+                            <div>
+                                <strong data-translate="testimonial2_name">Dr. Michael R.</strong>
+                                <p data-translate="testimonial2_role">Literature Professor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="about_title">About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-translate="about_text_1">The Book Lovers Association is dedicated to creating a community for those passionate about reading. Through curated reading lists, special events, and engaging discussions, we connect literary enthusiasts.</p>
+                        <p data-translate="about_text_2">Our mission is to promote reading and literary appreciation in our community. We believe that reading can transform lives, and we strive to create an inclusive environment where everyone can share their thoughts and experiences about books.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Section -->
+        <section id="join" class="section join-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="join_title">Ready to Join Our Literary Community?</h2>
+                <p class="section-subtitle" data-translate="join_subtitle">Sign up today and immerse yourself in a world of literary appreciation, engaging discussions, and special events.</p>
+                <div class="join-cta">
+                    <a href="#" class="button button-primary" onclick="registerNow()" data-translate="register_now">Register Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="contact_title">Contact Us</h2>
+                <p class="section-subtitle" data-translate="contact_subtitle">Reach out to us with any questions:</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+123456789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@bookloversassociation.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Book Lovers Association</h4>
+                    <p>Connecting readers and fostering a love for literature since 20XX.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i data-lucide="facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features" data-translate="nav_features">Features</a></li>
+                        <li><a href="#pdf-gallery" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="#testimonials" data-translate="nav_testimonials">Testimonials</a></li>
+                        <li><a href="#about-us" data-translate="nav_about">About Us</a></li>
+                    </ul>
+                </div>
+            
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2023 Book Lovers Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Make sure script.js is loaded after translations.js -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Set current year in footer
+        const currentYearElement = document.getElementById('current-year');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>

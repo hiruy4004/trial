@@ -1,0 +1,110 @@
+/* All media queries */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+    /* Header and Navigation */
+    .header .container {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0 35px;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        gap: 0.3rem;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Layout */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    /* Components */
+    .gallery-container {
+        height: 200px;
+        max-width: 100%;
+    }
+
+    .gallery-item, .pdf-item {
+        width: 100%;
+        max-width: 300px;
+        padding: 8px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 6rem;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    /* Header */
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Navigation */
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    /* Components */
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Spacing */
+    .section {
+        padding: 2rem 0;
+    }
+}
+
+/* Landscape orientation */
+@media (max-height: 480px) and (orientation: landscape) {
+    .hero {
+        padding-top: 4rem;
+    }
+
+    .header {
+        padding: 0.25rem 0;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .nav-controls,
+    .button {
+        display: none;
+    }
+
+    body {
+        background: none;
+        color: #000;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}

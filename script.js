@@ -406,6 +406,24 @@ function initializeSlider() {
     }
 }
 
+// Picture Gallery View More functionality
+function toggleGallery() {
+    const pictureGrid = document.querySelector('.picture-grid');
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+    const btnText = viewMoreBtn.querySelector('span') || viewMoreBtn;
+    const btnIcon = viewMoreBtn.querySelector('i');
+    
+    if (pictureGrid.classList.contains('expanded')) {
+        pictureGrid.classList.remove('expanded');
+        btnText.textContent = translations['view_more_btn'][isAmharic ? 'am' : 'en'];
+        btnIcon.style.transform = 'rotate(0deg)';
+    } else {
+        pictureGrid.classList.add('expanded');
+        btnText.textContent = translations['view_less_btn'][isAmharic ? 'am' : 'en'];
+        btnIcon.style.transform = 'rotate(180deg)';
+    }
+}
+
 // Show specific slide
 function showSlide(index) {
     // Hide all slides

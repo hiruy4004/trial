@@ -191,7 +191,7 @@ const translations = {
 },
 'testimonial1_quote': {
     'en': 'The Book Lovers Association has transformed our local reading group into a vibrant literary community.',
-    'am': 'የመጽሐፍት ፍቅር ማህበር የአካባቢያችንን የንባብ ቡድን ወደ ንቁ የሥነ-ጽሑፍ ማህበረሰብ ለውጦታል።'
+    'am': 'የመጽሐፍት ፍቅር ማህበረ የአካባቢያችንን የንባብ ቡድን ወደ ንቁ የሥነ-ጽሑፍ ማህበረሰብ ለውጦታል።'
 },
 'testimonial1_name': {
     'en': 'Sarah J.',
@@ -260,5 +260,42 @@ const translations = {
     'am': 'የአባላት አስተያየቶች'
 },
 
-// ... rest of existing translations ...
+// Picture Gallery translations
+'picture_gallery_title': {
+    'en': 'Photo Gallery',
+    'am': 'የፎቶ ማዕከል'
+},
+'picture1_title': {
+    'en': 'Book Club Meeting',
+    'am': 'የመጽሐፍት ክበብ ስብሰባ'
+},
+'picture1_desc': {
+    'en': 'Monthly gathering of our passionate readers',
+    'am': 'የወር የንባብ ወዳዶች ስብሰባ'
+},
+'picture2_title': {
+    'en': 'Author Visit',
+    'am': 'የደራሲ ጉብኝት'
+},
+'picture2_desc': {
+    'en': 'Special guest author sharing insights',
+    'am': 'ልዩ እንግዳ ደራሲ ልምዶችን ያካፍላል'
+},
+'picture3_title': {
+    'en': 'Reading Workshop',
+    'am': 'የንባብ ወርክሾፕ'
+},
+'picture3_desc': {
+    'en': 'Interactive session with young readers',
+    'am': 'ከወጣት አንባቢዎች ጋር የሚደረግ ተግባቦታዊ ክፍለ ጊዜ'
+},
+// Add these to your existing translations
+'view_more_btn': {
+    'en': 'View More',
+    'am': 'ተጨማሪ ይመልከቱ'
+},
+'view_less_btn': {
+    'en': 'View Less',
+    'am': 'ትንሽ ይመልከቱ'
+}
 };

@@ -289,13 +289,8 @@ const translations = {
     'en': 'Interactive session with young readers',
     'am': 'ከወጣት አንባቢዎች ጋር የሚደረግ ተግባቦታዊ ክፍለ ጊዜ'
 },
-// Add these to your existing translations
-'view_more_btn': {
-    'en': 'View More',
-    'am': 'ተጨማሪ ይመልከቱ'
-},
-'view_less_btn': {
-    'en': 'View Less',
-    'am': 'ትንሽ ይመልከቱ'
+'telegram_channel': {
+    'en': 'View Telegram Channel',
+    'am': 'የቴሌግራም ቻናል ይመልከቱ'
 }
 };

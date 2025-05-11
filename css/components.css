@@ -1,46 +1,45 @@
 /* Buttons */
-.button {
-    padding: 0.85rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    border: none;
+.button {   
+    align-content: center;
     display: inline-flex;
     align-items: center;
+    text-align: center;
     gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: rgb(0, 0, 0);
+    color: var(--color-primary);
+    border: 1px solid rgba(67, 97, 238, 0.2);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.1);
     text-decoration: none;
-    font-size: 1.05rem;
-    letter-spacing: 0.5px;
 }
 
 .button-primary {
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-color: #0217ff;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
     background: var(--gradient-primary);
-    color: var(--color-white);
-    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
 }
 
-.button-secondary {
-    background: var(--gradient-secondary);
-    color: var(--color-white);
-    box-shadow: 0 4px 15px rgba(247, 37, 133, 0.3);
-}
-
-.button-outline {
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-    background: transparent;
-    font-weight: 500;
-}
-
-.button:hover {
+.button-primary:hover {
+    background: #4ECDC4;
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
-}
-
-.button-outline:hover {
-    background: rgba(67, 97, 238, 0.1);
-    border-color: var(--color-primary-dark);
+    box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3),
+                0 6px 6px rgba(255, 107, 107, 0.2);
 }
 
 /* Hero Section */
@@ -837,6 +836,7 @@
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
+    justify-content: center;
 }
 
 .newsletter-input {
@@ -1201,15 +1201,71 @@
 }
 
 /* Touch-friendly interactions */
-@media (hover: none) {
-    .button:hover {
-        transform: none;
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets for better accessibility */
+    .nav-link,
+    .button,
+    .gallery-controls button,
+    .social-link {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px;
     }
 
-    .feature-card:hover {
+    /* Disable hover effects on touch devices */
+    .button:hover,
+    .feature-card:hover,
+    .pdf-item:hover,
+    .social-link:hover {
         transform: none;
+        box-shadow: var(--shadow-md);
+    }
+
+    /* Add active state feedback */
+    .button:active,
+    .feature-card:active,
+    .pdf-item:active,
+    .social-link:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+
+    /* Improve scroll behavior */
+    .gallery-slider,
+    nav ul {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .gallery-slide {
+        scroll-snap-align: center;
     }
 }
+
+/* Ensure proper spacing on small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .feature-card,
+    .pdf-item {
+        margin: 0.5rem 0;
+    }
+
+    /* Improve form elements on mobile */
+    input,
+    textarea,
+    select {
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: 12px;
+    }
+}
+
 /* Language Toggle Button */
 
 /* ... existing styles ... */

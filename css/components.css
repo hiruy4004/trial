@@ -36,7 +36,6 @@
 }
 
 .button-primary:hover {
-    background: #4ECDC4;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3),
                 0 6px 6px rgba(255, 107, 107, 0.2);

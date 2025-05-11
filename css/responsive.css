@@ -1,43 +1,89 @@
-/* All media queries */
+/* Modern Device Breakpoints (2022-2025) */
 
-/* Large screens (laptops & desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/* 4K & Ultra HD Displays */
+@media screen and (min-width: 2560px) {
     .container {
-        max-width: 1140px;
+        max-width: 2000px;
     }
 
     .gallery-container {
-        height: 500px;
+        height: 800px;
+    }
+
+    html {
+        font-size: 18px;
     }
 }
 
-/* Medium screens (tablets & smaller laptops, 992px to 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* Large Desktop Screens */
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+    .container {
+        max-width: 1800px;
+    }
+
+    .gallery-container {
+        height: 700px;
+    }
+}
+
+/* Standard Desktop & Laptop */
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .gallery-container {
+        height: 600px;
+    }
+}
+
+/* Modern Tablets (iPad Pro, Surface Pro) */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
     .container {
         max-width: 960px;
     }
 
     .gallery-container {
-        height: 450px;
+        height: 500px;
     }
 
-    .feature-card {
-        padding: 2rem;
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Tablets (768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
+/* Large Phones (iPhone 14 Pro Max, Samsung S23 Ultra) */
+@media screen and (max-width: 428px) and (min-height: 926px) {
     .container {
-        max-width: 720px;
+        padding: 0 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .gallery-container {
+        height: 250px;
+    }
+
+    .feature-card {
+        padding: 1.25rem;
+    }
+
+    /* Adjust for notch/dynamic island */
+    .header {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* Foldable Phones - Unfolded (Samsung Z Fold) */
+@media screen and (min-width: 717px) and (max-width: 934px) {
+    .container {
+        max-width: 700px;
     }
 
     .gallery-container {
         height: 400px;
-    }
-
-    .feature-card {
-        padding: 1.5rem;
     }
 
     .grid {
@@ -45,130 +91,82 @@
     }
 }
 
-/* Mobile devices (below 768px) */
-@media (max-width: 768px) {
-    /* Header and Navigation */
-    .header .container {
-        flex-direction: column;
-        padding: 0.5rem 0;
-    }
-
-    nav ul {
-        flex-direction: row;
-        overflow-x: auto;
-        padding: 0 35px;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-        gap: 0.3rem;
-    }
-
-    nav ul::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Layout */
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
+/* Foldable Phones - Folded */
+@media screen and (max-width: 280px) {
     .container {
-        padding: 0 15px;
-        max-width: 540px;
+        padding: 0 1rem;
     }
 
-    /* Typography */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.25rem; }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
 
-    /* Components */
     .gallery-container {
-        height: 300px;
+        height: 180px;
     }
 
-    .gallery-item, .pdf-item {
-        width: 100%;
-        max-width: 300px;
-        padding: 8px;
-    }
-
-    /* Hero Section */
-    .hero {
-        padding-top: 6rem;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    /* Newsletter Form */
-    .newsletter-form {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .newsletter-input {
-        width: 100%;
-    }
-}
-
-/* Small mobile devices (below 480px) */
-@media (max-width: 480px) {
-    /* Header */
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    /* Navigation */
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 0.3rem 0.8rem;
-    }
-
-    /* Components */
     .button {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         font-size: 0.9rem;
-        width: 100%;
-    }
-
-    /* Spacing */
-    .section {
-        padding: 2rem 0;
-    }
-
-    .gallery-container {
-        height: 200px;
-    }
-
-    .feature-card {
-        padding: 1rem;
     }
 }
 
-/* Landscape orientation for mobile devices */
-@media (max-height: 480px) and (orientation: landscape) {
+/* Tall Phones (Modern Aspect Ratios 20:9, 21:9) */
+@media screen and (max-width: 390px) and (min-height: 844px) {
     .hero {
-        padding-top: 4rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .header {
-        padding: 0.25rem 0;
+    .section {
+        padding: 4rem 0;
     }
 
     .gallery-container {
-        height: 200px;
+        height: 220px;
     }
 }
 
-/* Retina and high-DPI devices */
+/* High Refresh Rate Screens */
+@media screen and (prefers-reduced-motion: no-preference) {
+    .button,
+    .feature-card,
+    .gallery-slide,
+    .social-link {
+        transition-duration: 0.2s;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #121212;
+        --color-text: #ffffff;
+        --color-text-light: rgba(255, 255, 255, 0.7);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card,
+    .pdf-item,
+    .contact-form {
+        background: #1e1e1e;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* High DPI Screens */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     img {
         image-rendering: -webkit-optimize-contrast;
+    }
+
+    .feature-icon svg,
+    .social-link svg {
+        transform: scale(0.9);
     }
 }
 

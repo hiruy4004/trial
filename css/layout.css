@@ -17,8 +17,31 @@
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     transition: all 0.3s ease;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+main {
+    margin-top: 200px;
+}
+
+.hero {
+    padding-top: 1rem;
+}
+
+.logo {
+    margin-bottom: 0.5rem;
+}
+
+.language-toggle {
+    margin: 0.25rem 0;
 }
 
 .header.scrolled {
@@ -26,25 +49,43 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
 .header .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-toggle {
+    margin: 0.5rem 0;
+}
+
+.main-nav {
+    width: 100%;
 }
 
 .main-nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .main-nav a {
     color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
 }

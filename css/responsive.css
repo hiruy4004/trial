@@ -139,25 +139,6 @@
     }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #121212;
-        --color-text: #ffffff;
-        --color-text-light: rgba(255, 255, 255, 0.7);
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
-
-    .feature-card,
-    .pdf-item,
-    .contact-form {
-        background: #1e1e1e;
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-}
-
 /* High DPI Screens */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     img {

@@ -103,19 +103,23 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     z-index: 1;
-    padding: 0 1rem;
+    padding: 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-.hero-buttons .button {
-    width: 100%; /* Full width on mobile */
-    max-width: 300px;
-    padding: 1rem;
-    font-size: 1rem;
+.hero-buttons .button,
+.hero-buttons .button-primary {
+    width: 100%;
+    max-width: 250px;
     text-align: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .hero-buttons .button-primary {

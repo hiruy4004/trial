@@ -905,7 +905,8 @@
         font-size: 0.85rem;
         gap: 0.25rem;
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .button-primary {
@@ -913,7 +914,8 @@
         font-size: 0.8rem;
         letter-spacing: 0.2px;
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .hero-buttons {
@@ -923,14 +925,17 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 0 1rem;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 200px;
     }
 
     .hero-buttons .button,
     .hero-buttons .button-primary {
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
         justify-content: center;
+        margin: 0 auto;
     }
 }
 
@@ -2154,7 +2159,8 @@
         font-size: 0.85rem;
         gap: 0.25rem;
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .button-primary {
@@ -2162,7 +2168,8 @@
         font-size: 0.8rem;
         letter-spacing: 0.2px;
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .hero-buttons {
@@ -2172,14 +2179,17 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 0 1rem;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 200px;
     }
 
     .hero-buttons .button,
     .hero-buttons .button-primary {
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
         justify-content: center;
+        margin: 0 auto;
     }
 }
 
